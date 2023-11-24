@@ -1,0 +1,8 @@
+name,employee id,password,position,employee status
+John,AB123,pass1,Assistant Manager,Active
+Jane,DE456,pwd32,Clerk,Inactive
+Alex,GH789,pass,Branch Head,Active
+Sara,PQ567,word,Clerk,Inactive
+Chris,SU890,pass,Cleaner,Active
+Emma,VW234,1234,Clerk,Inactive
+Nigel,NG256,pwrd,Clerk,Active
