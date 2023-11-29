@@ -44,11 +44,24 @@ class Customer:
   @staticmethod
   def valid_postal(new_postal):
     pattern = re.compile('^[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]$')
-    if not pattern.fullmatch(new_postal):
-      return False
+    if pattern.fullmatch(new_postal):
+      return True
     
-    return True
+    return False
 
   @staticmethod
   def update_postal(name,postal_code,new_postal):
-    ...
+    dictionary_list=[]
+    with open('cx.csv','r') as file:
+      reader=csv.DictReader(file)
+      for row in reader:
+        dictionary_list.append(row)
+    headers=list(dictionary_list[0]) #for extracting the headers from the list of dictionaries
+    with open('cx.csv','w',newline='') as file:
+      writer=csv.DictWriter(file,fieldnames=headers)
+      writer.writeheader()
+      for row in dictionary_list:
+        if row['name']==name and row['postal code']==postal_code:
+          row['postal code']=new_postal
+        writer.writerow(row)
+

@@ -45,7 +45,9 @@ while True:
                       new_postal = input('\nEnter the New Postal Code🏠 ').strip().upper()
                       valid_postal = Customer.valid_postal(new_postal)
                       if valid_postal:
-                        Customer.update_postal(name,postal_code,new_postal)
+                        #updating address in CSV file
+                        a= Customer.update_postal(name,postal_code,new_postal)
+                        print(a)
                         print('\nThe New Postal Code Has Been Updated✅\n')
                       else:
                         print('\n 🚫 Could Not Update The Postal Code 🚫\n')
@@ -53,7 +55,8 @@ while True:
                      print('\n 🚫 Could Not Update The Postal Code 🚫\n')
                 elif int(cx_choice)==3:
                    break
-              except (Exception,KeyboardInterrupt):
+              except (Exception):
+                #  ,KeyboardInterrupt
                  continue
         #checking the not active status
         elif (verified=='not_active'):
