@@ -1,4 +1,5 @@
-import csv #csv file
+import csv
+from typing import Any #csv file
 import requests  #for API
 #env
 import os 
@@ -26,6 +27,7 @@ class Customer:
   
   @staticmethod
   def accountsummary(name,postal_code):
+    postal_code=Customer.get_postal(name,postal_code)
     with open('cx.csv','r') as file:
       reader=csv.DictReader(file)
       for row in reader:
@@ -35,7 +37,7 @@ class Customer:
           pass
   
   @staticmethod
-  def currency_rate(name,postal_code):
+  def currency_rate():
     response=requests.get(f'http://api.exchangeratesapi.io/v1/latest?access_key={api_key}&symbols=CAD')
     api_output = response.json()
     rate = api_output['rates']['CAD']
@@ -64,4 +66,14 @@ class Customer:
         if row['name']==name and row['postal code']==postal_code:
           row['postal code']=new_postal
         writer.writerow(row)
-
+    return 0
+  
+  
+  @staticmethod
+  def get_postal(name,postal_code):
+    with open('cx.csv','r') as file:
+      reader=csv.DictReader(file)
+      for row in reader:
+        if (row['name']==name):
+          return row['postal code'];
+      return postal_code

@@ -13,6 +13,7 @@ while True:
     print(tabulate(welcome_msg, tablefmt="pretty"), "\n")  # welcome message + new_line
     print(tabulate(menu, headers=['Option Name'], tablefmt='pretty',showindex='always'),'\n')
     try:
+    
       menu_choice = input(f'Which of the Options Best Suits You\nEnter Your Choice Here: ')
       #for employee
       if int(menu_choice) == 0:
@@ -31,12 +32,12 @@ while True:
                 print('\n',tabulate(cx_menu,headers=['Option Name'],showindex='always',tablefmt='pretty'),'\n')
                 cx_choice = int(input('Enter the Number Corresponding to the Option💻: '))
                 if (cx_choice)==0:
-                   #for account summary
-                   account_summary=Customer.accountsummary(name,postal_code) 
-                   print('\n',tabulate([account_summary],headers='keys',tablefmt='presto'),'\n')
+                  #for account summary
+                  account_summary=Customer.accountsummary(name,postal_code) 
+                  print('\n',tabulate([account_summary],headers='keys',tablefmt='presto'),'\n')
                 elif (cx_choice)==1: 
                   #for currency rate
-                  currency_rate = round(int(Customer.currency_rate(name,postal_code)))
+                  currency_rate = round(int(Customer.currency_rate()))
                   print(f'\n💵 1 GBP={currency_rate} CAD 💵\n')
                 elif (cx_choice)==2:
                   #changing the postal code
@@ -46,18 +47,17 @@ while True:
                       valid_postal = Customer.valid_postal(new_postal)
                       if valid_postal:
                         #updating address in CSV file
-                        a= Customer.update_postal(name,postal_code,new_postal)
-                        print(a)
+                        Customer.update_postal(name,postal_code,new_postal)
                         print('\nThe New Postal Code Has Been Updated✅\n')
                       else:
                         print('\n 🚫 Could Not Update The Postal Code 🚫\n')
                   else:
-                     print('\n 🚫 Could Not Update The Postal Code 🚫\n')
+                    print('\n 🚫 Could Not Update The Postal Code 🚫\n')
                 elif int(cx_choice)==3:
-                   break
+                  break
               except (Exception):
                 #  ,KeyboardInterrupt
-                 continue
+                continue
         #checking the not active status
         elif (verified=='not_active'):
           print('\nAccount Status is Inactive🚫\nContact Your Assistant Manager👔 For Further Assistance📞\n')
