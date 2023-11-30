@@ -1,11 +1,15 @@
 name,postal code,balance,status
-John,A2A5A6,1500,Active
-Jane,J1J1J1,2300,Inactive
-Emily,V6Z1Y6,200,Inactive
+John,A1A1A1,1500,Active
+Jane,J1J1J1,2300,Active
+Emily,V6Z1Y6,200,Active
 Michael,H2X3Y7,1200,Active
-Sara,L5N8L2,4501,Inactive
-Alex,K1K1K1,3501,Active
+Sara,L5N8L2,4501,Active
+Alex,K1K1K1,3981,Active
 Chris,C1C1C1,800,Active
 Emma,R3T2N2,10001,Active
-Mark,T2P3T1,671,Inactive
+Mark,T2P3T1,671,Active
 Rachel,K7L3N6,3000,Active
+Alex,A1A1A1,480,Active
+Brat,B1B2B1,1755,Active
+Shaw,S1S1S1,910,Active
+Nigel,N2N2N1,0,Active

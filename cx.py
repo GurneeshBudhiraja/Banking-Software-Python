@@ -1,5 +1,4 @@
 import csv
-from typing import Any #csv file
 import requests  #for API
 #env
 import os 
