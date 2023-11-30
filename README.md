@@ -28,5 +28,7 @@ CS50 Bank is a Python project that simulates a basic banking system with differe
 3. Requests: For making API requests to get currency exchange rates.
 4. Getpass: For secure employee number input.
 5. Black: Used for formatting code.
+6. **python-dotenv:** Used for managing environment variables, especially useful for storing sensitive information.
+
 
 Feel free to modify it further based on your preferences and project details
