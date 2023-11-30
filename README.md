@@ -23,12 +23,12 @@ CS50 Bank is a Python project that simulates a basic banking system with differe
    git clone https://github.com/GurneeshBudhiraja/Banking-Software-Python.git
 
 ## Libraries Used
-1. CSV: For reading and writing data to CSV files.
-2. Tabulate: For formatting tables for better readability.
-3. Requests: For making API requests to get currency exchange rates.
-4. Getpass: For secure employee number input.
-5. Black: Used for formatting code.
-6. **python-dotenv:** Used for managing environment variables, especially useful for storing sensitive information.
+1. **CSV**: For reading and writing data to CSV files.
+2. **Tabulate**: For formatting tables for better readability.
+3. **Requests**: For making API requests to get currency exchange rates.
+4. **Getpass**: For secure employee number input.
+5. **Black**: Used for formatting code.
+6. **python-dotenv**: Used for managing environment variables, especially useful for storing sensitive information like API keys, email addresses, etc.
 
 
 Feel free to modify it further based on your preferences and project details
