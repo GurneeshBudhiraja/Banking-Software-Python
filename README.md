@@ -21,7 +21,6 @@ CS50 Bank is a Python project that simulates a basic banking system with differe
 1. **Clone the repository:**
    
    git clone https://github.com/GurneeshBudhiraja/Banking-Software-Python.git
-   cd Banking-Software-Python
 
 ## Libraries Used
 1. CSV: For reading and writing data to CSV files.
